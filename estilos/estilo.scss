@@ -120,6 +120,9 @@ body{
                         padding-right: 10px;
                         transition: all 0.1s ease-in-out;
                         cursor: pointer;
+                        img{
+                            width: 120px;
+                        }
                         &__flex{
                             display: flex;
                             flex-direction: column;

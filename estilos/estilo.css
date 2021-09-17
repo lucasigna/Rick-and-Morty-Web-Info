@@ -176,6 +176,10 @@ body main .appSection__listDiv__listItems__item {
   cursor: pointer;
 }
 
+body main .appSection__listDiv__listItems__item img {
+  width: 120px;
+}
+
 body main .appSection__listDiv__listItems__item__flex {
   display: -webkit-box;
   display: -ms-flexbox;
