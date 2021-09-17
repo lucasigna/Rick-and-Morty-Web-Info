@@ -1,0 +1,564 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::placeholder{
+    color: $colorAzul58;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body{
+    background: url('../img/background_stars.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: $tipografia;
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: 0.3s ease-in;
+        z-index: 5;
+        img{
+            display: block;
+            margin: 20px auto;
+            height: 200px;
+            transition: 0.3s ease-in;
+        }
+    }
+    main{
+        background-color: $colorBlanco;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        position: fixed;
+        top: 240px;
+        transition: 0.3s ease-in;
+        #navPC{
+            margin: 10px;
+            ul{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    li{
+                        color: $colorAzul;
+                        font-weight: 400;
+                        font-size: 20px;
+                    }
+                    #actualPage{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .appSection{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            &__listDiv{
+                padding-bottom: 20px;
+                #inputQuery{
+                    border: none;
+                    background-color: $colorAzulSuave;
+                    border-radius: 10px;
+                    color: $colorAzul;
+                    font-weight: 400;
+                    padding: 5px 10px;
+                    font-size: 15px;
+                    margin-top: 10px;
+                    width: 900px;
+                    outline: none;
+                    font-family: $tipografia;
+                }
+                #navMini{
+                    display: none;
+                    margin: 10px;
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        width: 90vw;
+                        justify-content: space-between;
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            li{
+                                background-color: $colorAzulSuave;
+                                padding: 5px 10px;
+                                font-size: 20px;
+                                border-radius: 10px;
+                                color: $colorAzul;
+                                font-weight: 400;
+                                font-size: 20px;
+                            }
+                            #actualPage{
+                                color: $colorBlanco;
+                                background-color: $colorAzulFuerte;
+                            }
+                        }
+                    }
+                }
+                select{
+                    display: none;
+                }
+                &__listItems{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    &__item{
+                        display: flex;
+                        height: 120px;
+                        background-color: $colorAzulFuerte;
+                        margin: 10px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                        padding-right: 10px;
+                        transition: all 0.1s ease-in-out;
+                        cursor: pointer;
+                        &__flex{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            padding: 10px;
+                            p{
+                                color: $colorBlanco;
+                                font-weight: 400;
+                                font-size: 15px;
+                            }
+                            p:first-child{
+                                font-weight: 600;
+                                font-size: 17px;
+                            }
+                        }
+                        &:hover{
+                            transform: scale(1.02);
+                            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+                #btnsPages{
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 20px 0;
+                }
+                #pages{
+                    background-color: $colorAzulFuerte;
+                    color: $colorBlanco;
+                    border: none;
+                    padding: 5px 20px;
+                    border-radius: 10px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+                .btnUnblocked{
+                    background-color: $colorAzulFuerte;
+                    color: $colorBlanco;
+                    font-family: $tipografia;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.02);
+                        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+                    }
+                }
+                .btnBlocked{
+                    background-color: $colorAzulFuerte;
+                    color: $colorBlanco;
+                    font-family: $tipografia;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    opacity: 0.3;
+                }
+            }
+            &__filtersDiv{
+                padding: 10px;
+                h2{
+                    color: $colorAzul;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+                h3{
+                    color: $colorAzul;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+                /* The container */
+                .checkContainer {
+                    display: block;
+                    position: relative;
+                    padding-left: 25px;
+                    margin-bottom: 5px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    font-size: 17px;
+                    color: $colorAzul;
+                    font-weight: 400;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                
+                /* Hide the browser's default checkbox */
+                .checkContainer input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                
+                /* Create a custom checkbox */
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 5px;
+                    background-color: $colorAzulSuave;
+                }
+                
+                /* On mouse-over, add a grey background color */
+                .checkContainer:hover input ~ .checkmark {
+                    background-color: $colorAzul58;
+                }
+                
+                /* When the checkbox is checked, add a blue background */
+                .checkContainer input:checked ~ .checkmark {
+                    background-color: $colorAzul;
+                }
+                
+                /* Create the checkmark/indicator (hidden when not checked) */
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                
+                /* Show the checkmark when checked */
+                .checkContainer input:checked ~ .checkmark:after {
+                    display: block;
+                }
+                
+                /* Style the checkmark/indicator */
+                .checkContainer .checkmark:after {
+                    left: 6px;
+                    top: 1px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    #modalView{
+        display: none; /* Hidden by default */
+        justify-content: center;
+        align-items: center;
+        position: fixed; /* Stay in place */
+        z-index: 10; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        .modalContent{
+            width: 80vw;
+            background-color: $colorAzulFuerte;
+            border-radius: 20px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            display: grid;
+            grid-template-areas: "div1 div2" "episodes episodes" "btn btn";
+            color: $colorBlanco;
+            overflow: auto;
+            padding: 20px;
+            &__1{
+                grid-area: div1;
+                display: flex;
+                img{
+                    height: 150px;
+                    border-radius: 10px;
+                    border: 1px solid $colorBlanco;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    margin-left: 10px;
+                    p:first-child{
+                        font-size: 25px;
+                        font-weight: 600;
+                    }
+                    p{
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            &__2{
+                grid-area: div2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+            &__episodes{
+                grid-area: episodes;
+                margin-top: 10px;
+                h4{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                &__flex{
+                    display: flex;
+                    flex-flow: row wrap;
+                    max-height: 40vh;
+                    overflow: auto;
+                    background-color: $colorAzulFuerteBack;
+                    border-radius: 20px;
+                    &__item{
+                        border-radius: 10px;
+                        border: 1px solid $colorBlanco;
+                        padding: 10px;
+                        margin: 10px;
+                        p:first-child{
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: 15px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            &__episodeTop{
+                grid-area: episodeTop;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                p:first-child{
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+            &__episodeCharacters{
+                grid-area: episodeCharacters;
+                margin-top: 10px;
+                h4{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                &__flex{
+                    display: flex;
+                    flex-flow: row wrap;
+                    max-height: 40vh;
+                    overflow: auto;
+                    background-color: $colorAzulFuerteBack;
+                    border-radius: 20px;
+                    &__item{
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: 10px;
+                        border: 1px solid $colorBlanco;
+                        margin: 10px;
+                        overflow: hidden;
+                        max-width: 150px;
+                        div{
+                            padding: 10px;
+                            p:first-child{
+                                font-size: 15px;
+                                font-weight: 600;
+                            }
+                            p{
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }  
+            button{
+                grid-area: btn;
+                background-color: $colorAzulFuerteBack;
+                color: $colorBlanco;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 10px;
+                font-weight: 400;
+                font-family: $tipografia;
+                font-size: 20px;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+                margin-top: 20px;
+                &:hover{
+                    transform: scale(1.02);
+                    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+    }
+}
+
+/* Para vista en tablet */
+
+@media only screen and (min-width: 960px) and (max-width: 1300px) {
+
+    body{
+        main{
+            .appSection{
+                grid-template-columns: 1fr 1fr;
+                &__listDiv{
+                    #inputQuery{
+                        width: 60vw;
+                    }
+                    &__listItems{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Para vista en celular */
+
+@media only screen and (max-width: 960px) {
+
+    body{
+        background: $colorBlanco;
+        header{
+            background-color: $colorAzulFuerte;
+            img{
+                height: 50px;
+            }
+        }
+        main{
+            display: block;
+            position: initial;
+            margin: 0;
+            margin-top: 90px;
+            height: 100%;
+            #navPC{
+                display: none;
+            }
+            .appSection{
+                display: block;
+                margin: 10px auto;
+                &__listDiv{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    #inputQuery{
+                        width: 90vw;
+                        font-size: 20px;
+                    }
+                    #navMini{
+                        display: initial;
+                    }
+                    &__listItems{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &__item{
+                            width: 90vw;
+                        }
+                    }
+                    select{
+                        display: initial;
+                        width: 90vw;
+                        background-color: $colorAzulSuave;
+                        border-radius: 10px;
+                        color: $colorAzul;
+                        font-weight: 400;
+                        padding: 5px 10px;
+                        font-size: 20px;
+                        margin-top: 10px;
+                        outline: none;
+                        border: none;
+                        font-family: $tipografia;
+                    }
+                    #btnsPages{
+                        margin: 0;
+                        margin-top: 10px;
+                        width: 90vw;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+        #modalView{
+            .modalContent{
+                display: flex;
+                flex-direction: column;
+                margin-top: 200px;
+                &__1{
+                    img{
+                        height: 100px;
+                    }
+                    div{
+                        p:first-child{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &__2{
+                    margin-top: 10px;
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                &__episodes{
+                    &__flex{
+                        
+                        flex-flow: column wrap;
+                    }
+                }
+                &__episodeCharacters{
+                    &__flex{
+                        flex-flow: column wrap;
+                        &__item{
+                            flex-direction: row;
+                            max-width: initial;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

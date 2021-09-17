@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-input-placeholder {
+  color: #0187a58f;
+}
+
+:-ms-input-placeholder {
+  color: #0187a58f;
+}
+
+::-ms-input-placeholder {
+  color: #0187a58f;
+}
+
+::placeholder {
+  color: #0187a58f;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background: url("../img/background_stars.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+body header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  z-index: 5;
+}
+
+body header img {
+  display: block;
+  margin: 20px auto;
+  height: 200px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+body main {
+  background-color: #FFFECB;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 6fr;
+      grid-template-columns: 1fr 6fr;
+  position: fixed;
+  top: 240px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+body main #navPC {
+  margin: 10px;
+}
+
+body main #navPC ul {
+  list-style: none;
+}
+
+body main #navPC ul a {
+  text-decoration: none;
+}
+
+body main #navPC ul a li {
+  color: #0187A5;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+body main #navPC ul a #actualPage {
+  font-weight: 700;
+}
+
+body main .appSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+body main .appSection__listDiv {
+  padding-bottom: 20px;
+}
+
+body main .appSection__listDiv #inputQuery {
+  border: none;
+  background-color: #C4E0F9;
+  border-radius: 10px;
+  color: #0187A5;
+  font-weight: 400;
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 900px;
+  outline: none;
+  font-family: "Baloo Thambi 2", cursive;
+}
+
+body main .appSection__listDiv #navMini {
+  display: none;
+  margin: 10px;
+}
+
+body main .appSection__listDiv #navMini ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+body main .appSection__listDiv #navMini ul a {
+  text-decoration: none;
+}
+
+body main .appSection__listDiv #navMini ul a li {
+  background-color: #C4E0F9;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #0187A5;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+body main .appSection__listDiv #navMini ul a #actualPage {
+  color: #FFFECB;
+  background-color: #1D1D41;
+}
+
+body main .appSection__listDiv select {
+  display: none;
+}
+
+body main .appSection__listDiv__listItems {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body main .appSection__listDiv__listItems__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120px;
+  background-color: #1D1D41;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-right: 10px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+body main .appSection__listDiv__listItems__item__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+body main .appSection__listDiv__listItems__item__flex p {
+  color: #FFFECB;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+body main .appSection__listDiv__listItems__item__flex p:first-child {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+body main .appSection__listDiv__listItems__item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+body main .appSection__listDiv #btnsPages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px 0;
+}
+
+body main .appSection__listDiv #pages {
+  background-color: #1D1D41;
+  color: #FFFECB;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body main .appSection__listDiv .btnUnblocked {
+  background-color: #1D1D41;
+  color: #FFFECB;
+  font-family: "Baloo Thambi 2", cursive;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+body main .appSection__listDiv .btnUnblocked:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+body main .appSection__listDiv .btnBlocked {
+  background-color: #1D1D41;
+  color: #FFFECB;
+  font-family: "Baloo Thambi 2", cursive;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 0.3;
+}
+
+body main .appSection__filtersDiv {
+  padding: 10px;
+  /* The container */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+body main .appSection__filtersDiv h2 {
+  color: #0187A5;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+body main .appSection__filtersDiv h3 {
+  color: #0187A5;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+body main .appSection__filtersDiv .checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  color: #0187A5;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body main .appSection__filtersDiv .checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+body main .appSection__filtersDiv .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  background-color: #C4E0F9;
+}
+
+body main .appSection__filtersDiv .checkContainer:hover input ~ .checkmark {
+  background-color: #0187a58f;
+}
+
+body main .appSection__filtersDiv .checkContainer input:checked ~ .checkmark {
+  background-color: #0187A5;
+}
+
+body main .appSection__filtersDiv .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+body main .appSection__filtersDiv .checkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body main .appSection__filtersDiv .checkContainer .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+body #modalView {
+  display: none;
+  /* Hidden by default */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+body #modalView .modalContent {
+  width: 80vw;
+  background-color: #1D1D41;
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "div1 div2" "episodes episodes" "btn btn";
+  color: #FFFECB;
+  overflow: auto;
+  padding: 20px;
+}
+
+body #modalView .modalContent__1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: div1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #modalView .modalContent__1 img {
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #FFFECB;
+}
+
+body #modalView .modalContent__1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 10px;
+}
+
+body #modalView .modalContent__1 div p:first-child {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__1 div p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body #modalView .modalContent__2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: div2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #modalView .modalContent__2 p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body #modalView .modalContent__episodes {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: episodes;
+  margin-top: 10px;
+}
+
+body #modalView .modalContent__episodes h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__episodes__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-height: 40vh;
+  overflow: auto;
+  background-color: #30306d;
+  border-radius: 20px;
+}
+
+body #modalView .modalContent__episodes__flex__item {
+  border-radius: 10px;
+  border: 1px solid #FFFECB;
+  padding: 10px;
+  margin: 10px;
+}
+
+body #modalView .modalContent__episodes__flex__item p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__episodes__flex__item p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body #modalView .modalContent__episodeTop {
+  grid-area: episodeTop;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #modalView .modalContent__episodeTop p:first-child {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__episodeTop p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body #modalView .modalContent__episodeCharacters {
+  grid-area: episodeCharacters;
+  margin-top: 10px;
+}
+
+body #modalView .modalContent__episodeCharacters h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__episodeCharacters__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  max-height: 40vh;
+  overflow: auto;
+  background-color: #30306d;
+  border-radius: 20px;
+}
+
+body #modalView .modalContent__episodeCharacters__flex__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #FFFECB;
+  margin: 10px;
+  overflow: hidden;
+  max-width: 150px;
+}
+
+body #modalView .modalContent__episodeCharacters__flex__item div {
+  padding: 10px;
+}
+
+body #modalView .modalContent__episodeCharacters__flex__item div p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body #modalView .modalContent__episodeCharacters__flex__item div p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+body #modalView .modalContent button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: btn;
+  background-color: #30306d;
+  color: #FFFECB;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-family: "Baloo Thambi 2", cursive;
+  font-size: 20px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+body #modalView .modalContent button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Para vista en tablet */
+@media only screen and (min-width: 960px) and (max-width: 1300px) {
+  body main .appSection {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body main .appSection__listDiv #inputQuery {
+    width: 60vw;
+  }
+  body main .appSection__listDiv__listItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* Para vista en celular */
+@media only screen and (max-width: 960px) {
+  body {
+    background: #FFFECB;
+  }
+  body header {
+    background-color: #1D1D41;
+  }
+  body header img {
+    height: 50px;
+  }
+  body main {
+    display: block;
+    position: initial;
+    margin: 0;
+    margin-top: 90px;
+    height: 100%;
+  }
+  body main #navPC {
+    display: none;
+  }
+  body main .appSection {
+    display: block;
+    margin: 10px auto;
+  }
+  body main .appSection__listDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .appSection__listDiv #inputQuery {
+    width: 90vw;
+    font-size: 20px;
+  }
+  body main .appSection__listDiv #navMini {
+    display: initial;
+  }
+  body main .appSection__listDiv__listItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .appSection__listDiv__listItems__item {
+    width: 90vw;
+  }
+  body main .appSection__listDiv select {
+    display: initial;
+    width: 90vw;
+    background-color: #C4E0F9;
+    border-radius: 10px;
+    color: #0187A5;
+    font-weight: 400;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-family: "Baloo Thambi 2", cursive;
+  }
+  body main .appSection__listDiv #btnsPages {
+    margin: 0;
+    margin-top: 10px;
+    width: 90vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body #modalView .modalContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 200px;
+  }
+  body #modalView .modalContent__1 img {
+    height: 100px;
+  }
+  body #modalView .modalContent__1 div p:first-child {
+    font-size: 20px;
+  }
+  body #modalView .modalContent__1 div p {
+    font-size: 15px;
+  }
+  body #modalView .modalContent__2 {
+    margin-top: 10px;
+  }
+  body #modalView .modalContent__2 p {
+    font-size: 15px;
+  }
+  body #modalView .modalContent__episodes__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  body #modalView .modalContent__episodeCharacters__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  body #modalView .modalContent__episodeCharacters__flex__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: initial;
+    height: 120px;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
