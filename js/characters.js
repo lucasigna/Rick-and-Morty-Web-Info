@@ -294,6 +294,16 @@ function createViewCharacters(app,nav,modal) {
 
         });
 
+        $('#modalView').click( function(event) {
+
+            if(event.target.id == 'modalView') {
+
+                modal.css({'display':'none'});
+            
+            }
+
+        });
+
     }
 
     function loadPage(page) {
